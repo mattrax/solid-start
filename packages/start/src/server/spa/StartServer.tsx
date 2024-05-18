@@ -20,10 +20,6 @@ export function StartServer(props: { document: Component<DocumentComponentProps>
           nonce ? (
             <>
               <script
-                nonce={nonce}
-                innerHTML={`window.manifest = ${JSON.stringify(context.manifest)}`}
-              />
-              <script
                 type="module"
                 src={
                   import.meta.env.MANIFEST["client"]!.inputs[
@@ -34,7 +30,6 @@ export function StartServer(props: { document: Component<DocumentComponentProps>
             </>
           ) : (
             <>
-              <script innerHTML={`window.manifest = ${JSON.stringify(context.manifest)}`} />
               <script
                 type="module"
                 src={

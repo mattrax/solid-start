@@ -81,10 +81,6 @@ export function StartServer(props: { document: Component<DocumentComponentProps>
           nonce ? (
             <>
               <script
-                nonce={nonce}
-                innerHTML={`window.manifest = ${JSON.stringify(context.manifest)}`}
-              />
-              <script
                 type="module"
                 nonce={nonce}
                 async
@@ -97,7 +93,6 @@ export function StartServer(props: { document: Component<DocumentComponentProps>
             </>
           ) : (
             <>
-              <script innerHTML={`window.manifest = ${JSON.stringify(context.manifest)}`} />
               <script
                 type="module"
                 async
