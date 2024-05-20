@@ -80,7 +80,10 @@ function defineRoutes(fileRoutes: Route[]) {
         .replace(/\/\([^)/]+\)/g, "")
         .replace(/\([^)/]+\)/g, "")
         // replace . with / for flat routes - e.g. foo.bar -> foo/bar
-        .replace(/(?<!\.)\.(?!\.)/g, "/")
+        .replace(/\./g, "/")
+        // converts any splat route ... that got replaced back from ///
+        // this could be avoided with a lookbehind regex but safar has only supported them since mid 2023
+        .replace("///", "...")
     });
 
     return routes;
