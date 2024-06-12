@@ -28,7 +28,6 @@ export class SolidStartClientFileRouter extends BaseFileSystemRouter {
     return toPathBase(src, this.config);
   }
 
-  /** @param src {string} */
   toRoute(src) {
     let path = this.toPath(src);
 
