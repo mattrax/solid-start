@@ -57,7 +57,7 @@
     "typescript": "5.3.3",
     "valibot": "~0.29.0",
     "vinxi": "^0.4.1",
-    "vite": "^5.1.1"
+    "vite": "^5.2.14"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
